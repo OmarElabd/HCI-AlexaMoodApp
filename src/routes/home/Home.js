@@ -18,8 +18,7 @@ import {
   ResponsiveContainer
 } from '../../vendor/recharts';
 
-const title = 'Sb Admin React';
-
+const title = 'Alexa Mood Application';
 
 const data = [
   {name: 'Page A', uv: 4000, pv: 2400, amt: 2400, value: 600},
