@@ -3,7 +3,7 @@ import DataTablePage from './datatable';
 
 export default {
 
-  path: 'exploration/datatable',
+  path: '/exploration/datatable',
 
   action() {
     return <DataTablePage />;
