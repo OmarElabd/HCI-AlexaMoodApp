@@ -26,28 +26,29 @@ const logo = require('./logo.png');
 function Header() {
   return (
     <div id="wrapper" className="content">
-      <Navbar fluid={true}  style={ {margin: 0} }>
-          <Brand>
+      <Navbar fluid={true} style={{margin: 0}}>
+        <Brand>
             <span>
               <span>Alexa Mood App</span>
             </span>
-          </Brand>
+        </Brand>
 
-          <ul className="nav navbar-top-links navbar-right">
+        <ul className="nav navbar-top-links navbar-right">
 
-          </ul>
-          <Sidebar />
-    </Navbar>
+        </ul>
+        <Sidebar/>
+      </Navbar>
     </div>
   );
 }
-function toggleMenu(){
-    if($(".navbar-collapse").hasClass('collapse')){
-      $(".navbar-collapse").removeClass('collapse');
-    }
-    else{
-      $(".navbar-collapse").addClass('collapse');
-    }
+
+function toggleMenu() {
+  if ($(".navbar-collapse").hasClass('collapse')) {
+    $(".navbar-collapse").removeClass('collapse');
   }
+  else {
+    $(".navbar-collapse").addClass('collapse');
+  }
+}
 
 export default Header;

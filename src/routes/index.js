@@ -11,6 +11,7 @@ import React from 'react';
 import App from '../components/App';
 
 // Child routes
+import sleep from './integrations/sleep';
 import home from './home';
 import login from './login';
 import table from './dashboardPages/tables';
@@ -64,6 +65,7 @@ export default [
       typography,
       // register,
       blank,
+      sleep,
 
       // place new routes before...
       // content,
