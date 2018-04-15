@@ -9,3 +9,4 @@ npm-debug.log
 /build/
 /node_modules/
 /.idea/
+.debug.logs

@@ -113,7 +113,8 @@
     "url-loader": "^0.5.7",
     "webpack": "^1.13.2",
     "webpack-hot-middleware": "^2.12.2",
-    "webpack-middleware": "^1.5.1"
+    "webpack-middleware": "^1.5.1",
+    "chartjs": "^0.3.24"
   },
   "babel": {
     "presets": [
