@@ -78,10 +78,10 @@ class Sidebar extends Component {
                     href=""
                     onClick={(e) => {
                       e.preventDefault();
-                      history.push('/morrisjscharts');
+                      history.push('/exploration/scatter');
                     }}
                   >
-                    Morrisjs Charts
+                    Scatter Plot
                   </a>
                 </li>
               </ul>

@@ -11,6 +11,7 @@ import React from 'react';
 import App from '../components/App';
 
 // Child routes
+import scatter from './exploration/scatter';
 import datatable from './exploration/datatable';
 import sleep from './integrations/sleep';
 import home from './home';
@@ -68,7 +69,7 @@ export default [
       blank,
       sleep,
       datatable,
-
+      scatter,
       // place new routes before...
       // content,
       error,
