@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import classNames from 'classnames';
 import history from '../../core/history';
 
@@ -17,40 +17,42 @@ class Sidebar extends Component {
 
   render() {
     return (
-      <div className="navbar-default sidebar" style={{marginLeft: '-20px'}} role="navigation">
+      <div className="navbar-default sidebar" style={{ marginLeft: '-20px' }} role="navigation">
         <div className="sidebar-nav navbar-collapse collapse">
           <ul className="nav in" id="side-menu">
             <li className="sidebar-search">
               <div className="input-group custom-search-form">
-                <input type="text" className="form-control" placeholder="Search..."/>
+                <input type="text" className="form-control" placeholder="Search..." />
                 <span className="input-group-btn">
                   <button className="btn btn-default" type="button">
-                    <i className="fa fa-search"/>
+                    <i className="fa fa-search" />
                   </button>
                 </span>
               </div>
             </li>
 
             <li>
-              <a href="" onClick={(e) => {
-                e.preventDefault();
-                history.push('/');
-              }}>
-                <i className="fa fa-dashboard fa-fw"/> &nbsp;Home
+              <a
+                href="" onClick={(e) => {
+                  e.preventDefault();
+                  history.push('/');
+                }}
+              >
+                <i className="fa fa-dashboard fa-fw" /> &nbsp;Home
               </a>
             </li>
 
-            <li className={classNames({active: !this.state.chartsElementsCollapsed})}>
+            <li className={classNames({ active: !this.state.chartsElementsCollapsed })}>
               <a
                 href=""
                 onClick={(e) => {
                   e.preventDefault();
-                  this.setState({chartsElementsCollapsed: !this.state.chartsElementsCollapsed});
+                  this.setState({ chartsElementsCollapsed: !this.state.chartsElementsCollapsed });
                   return false;
                 }}
               >
-                <i className="fa fa-bar-chart-o fa-fw"/> &nbsp;Data Exploration
-                <span className="fa arrow"/>
+                <i className="fa fa-bar-chart-o fa-fw" /> &nbsp;Data Exploration
+                <span className="fa arrow" />
               </a>
 
               <ul
@@ -62,11 +64,13 @@ class Sidebar extends Component {
                 }
               >
                 <li>
-                  <a href="" onClick={(e) => {
-                    e.preventDefault();
-                    history.push('/flotcharts');
-                  }}>
-                    FlotCharts
+                  <a
+                    href="" onClick={(e) => {
+                      e.preventDefault();
+                      history.push('/exploration/datatable');
+                    }}
+                  >
+                    DataTable
                   </a>
                 </li>
                 <li>
@@ -85,21 +89,25 @@ class Sidebar extends Component {
 
 
             <li>
-              <a href="" onClick={(e) => {
-                e.preventDefault();
-                history.push('/table');
-              }}>
-                <i className="fa fa-table fa-fw"/> &nbsp;Recommendations
+              <a
+                href="" onClick={(e) => {
+                  e.preventDefault();
+                  history.push('/table');
+                }}
+              >
+                <i className="fa fa-table fa-fw" /> &nbsp;Recommendations
               </a>
             </li>
 
 
             <li>
-              <a href="" onClick={(e) => {
-                e.preventDefault();
-                history.push('/table');
-              }}>
-                <i className="fa fa-table fa-fw"/> &nbsp;Data Integrations
+              <a
+                href="" onClick={(e) => {
+                  e.preventDefault();
+                  history.push('/table');
+                }}
+              >
+                <i className="fa fa-table fa-fw" /> &nbsp;Data Integrations
               </a>
             </li>
           </ul>

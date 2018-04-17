@@ -33,6 +33,9 @@ const GLOBALS = {
 // Common configuration chunk to be used for both
 // client-side (client.js) and server-side (server.js) bundles
 // -----------------------------------------------------------------------------
+const providePlugin = new webpack.ProvidePlugin({
+  Handsontable: 'handsontable/dist/handsontable.full.js',
+});
 
 const config = {
   context: path.resolve(__dirname, '../src'),
@@ -44,6 +47,12 @@ const config = {
   },
 
   module: {
+    exports: {
+      module: {
+        noParse: [path.join(__dirname, 'node_modules/handsontable/dist/handsontable.full.js')],
+      },
+      plugins: [providePlugin],
+    },
     loaders: [
       {
         test: /\.jsx?$/,
@@ -281,6 +290,7 @@ const serverConfig = extend(true, {}, config, {
     // Define free variables
     // https://webpack.github.io/docs/list-of-plugins.html#defineplugin
     new webpack.DefinePlugin({ ...GLOBALS, 'process.env.BROWSER': false }),
+
 
     // Adds a banner to the top of each generated chunk
     // https://webpack.github.io/docs/list-of-plugins.html#bannerplugin
