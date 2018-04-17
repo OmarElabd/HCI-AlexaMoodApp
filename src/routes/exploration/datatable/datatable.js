@@ -1,5 +1,5 @@
-import React, { PropTypes } from 'react';
-import ReactTable from 'react-table';
+import React from 'react';
+import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
 
 const title = 'Data Table View';
 
@@ -156,31 +156,22 @@ class DataTablePage extends React.Component {
   }
 
   render() {
-    const data = [{
-      name: 'Tanner Linsley',
-      age: 26,
-    },
-    {
-      name: 'Tanner Linsley',
-      age: 26,
-    },
-    {
-      name: 'Tanner Linsley',
-      age: 26,
-    }];
-
-    const columns = [{
-      Header: 'Name',
-      accessor: 'name', // String-based value accessors!
+    const products = [{
+      id: 1,
+      name: 'Item name 1',
+      price: 100,
     }, {
-      Header: 'Age',
-      accessor: 'age',
+      id: 2,
+      name: 'Item name 2',
+      price: 100,
     }];
-
 
     return (
       <div>
-        <ReactTable data={data} columns={columns} />
+        <BootstrapTable data={products} striped hover>
+          <TableHeaderColumn dataField="id" isKey dataAlign="center" dataSort>Product  ID</TableHeaderColumn>
+          <TableHeaderColumn dataField="name" dataSort>Product Name</TableHeaderColumn>
+        </BootstrapTable>
       </div>
     );
   }
