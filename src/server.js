@@ -94,7 +94,7 @@ app.get('*', async (req, res, next) => {
         // console.log('inside render of UniversalRouter', component);
         css = new Set();
         statusCode = status;
-        data.children = ReactDOM.renderToString(component);
+        //data.children = ReactDOM.renderToString(component);
         data.style = [...css].join('');
         return true;
       },
