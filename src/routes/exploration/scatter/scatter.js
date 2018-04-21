@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScatterChart, Scatter, Cell, XAxis, YAxis, CartesianGrid, LabelList, Tooltip, ReferenceLine, Label } from 'recharts';
+import { ScatterChart, Scatter, Cell, XAxis, YAxis, ZAxis, CartesianGrid, LabelList, Tooltip, ReferenceLine, Label } from 'recharts';
 
 const title = 'Scatter Data';
 
@@ -19,13 +19,14 @@ class ScatterPage extends React.Component {
   render() {
     return (
       <ScatterChart width={600} height={600} margin={{ top: 50, right: 100, bottom: 50, left: 50 }}>
-        <XAxis height={90} type="number" dataKey={'x'} name="stature" unit="cm" >
-          <Label value="Pages of my website" offset={0} position="insideBottom" />
+        <XAxis height={90} type="number" dataKey={'x'} name="Pleasant Score" >
+          <Label value="Deactivation" offset={0} position="insideBottom" />
         </XAxis>
-        <YAxis label={{ value: 'pv of page', angle: -90, position: 'insideLeft' }} type="number" dataKey={'y'} name="weight" unit="kg" />
-        <CartesianGrid />
-        <ReferenceLine x={0} stroke="red" label="Activity" />
-        <ReferenceLine y={0} label="Pleasant" stroke="red" />
+        <YAxis label={{ value: 'Unpleasant', angle: -90, position: 'insideLeft' }} type="number" dataKey={'y'} name="Activation Score" />
+        <ZAxis dataKey={'z'} name="mood"/>
+        <CartesianGrid stroke="#eee" strokeDasharray="5 5" />
+        <ReferenceLine x={0} stroke="red" label={{ value: 'Activation', position: 'top' }} />
+        <ReferenceLine y={0} label={{ value: 'Pleasant', angle: -90, position: 'right' }} stroke="red" />
         <Tooltip cursor={{ strokeDasharray: '3 3' }} />
         <Scatter name="A school" data={data} fill="#8884d8">
           {

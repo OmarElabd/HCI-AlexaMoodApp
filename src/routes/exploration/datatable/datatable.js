@@ -41,7 +41,7 @@ class DataTablePage extends React.Component {
           <TableHeaderColumn dataField="id" isKey dataSort>Data ID</TableHeaderColumn>
           <TableHeaderColumn dataField="date" dataSort>Date</TableHeaderColumn>
           <TableHeaderColumn dataField="time" dataSort>Time</TableHeaderColumn>
-          <TableHeaderColumn dataField="mood" filterFormatted dataFormat={enumFormatter} formatExtraData={moodType} filter={{ type: 'SelectFilter', options: moodType, defaultValue: 1 }}>Mood</TableHeaderColumn>
+          <TableHeaderColumn dataField="mood" filterFormatted dataFormat={enumFormatter} formatExtraData={moodType} filter={{ type: 'SelectFilter', options: moodType }}>Mood</TableHeaderColumn>
           <TableHeaderColumn dataField="score" dataSort>Score</TableHeaderColumn>
           <TableHeaderColumn dataField="text">Text</TableHeaderColumn>
           <TableHeaderColumn dataField="audio">Audio</TableHeaderColumn>
