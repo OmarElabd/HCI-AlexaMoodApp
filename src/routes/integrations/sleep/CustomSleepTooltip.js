@@ -15,7 +15,7 @@ const popupStyle = {
   whiteSpace: 'nowrap',
 };
 
-class CustomTooltip extends React.Component {
+class CustomSleepTooltip extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -30,6 +30,14 @@ class CustomTooltip extends React.Component {
     }
   };
 
+  labelFormatter = (value) => {
+    if(this.props.filter === "yearly") {
+      return "Avg. Hours of Sleep: " + value;
+    } else {
+      return "Hours of Sleep: " + value;
+    }
+  };
+
   render() {
     const {active} = this.props;
 
@@ -39,6 +47,7 @@ class CustomTooltip extends React.Component {
         <div style={popupStyle}>
           <p className="recharts-tooltip-label">{this.timeFormatter(label)}</p>
           <p className="recharts-tooltip-label">{`Mood Scale: ${payload[0].value}`}</p>
+          <p className="recharts-tooltip-label">{this.labelFormatter(payload[1].value)}</p>
         </div>
       );
     }
@@ -47,4 +56,4 @@ class CustomTooltip extends React.Component {
   }
 }
 
-export default CustomTooltip;
+export default CustomSleepTooltip;
