@@ -26,9 +26,16 @@ const products = [{
   time: '09:15',
   mood: 0,
   score: 8,
-  text: '....',
-  audio: 'audio',
+  text: 'Play the Strokes',
+  audio: '01.wav',
 }];
+
+const audioFormatter = (value) => {
+  return (<div>
+    <audio ref="audio_tag" src={"/assets/audio/" + value} controls />
+  </div>);
+}
+
 class DataTablePage extends React.Component {
   constructor(props) {
     super(props);
@@ -44,7 +51,7 @@ class DataTablePage extends React.Component {
           <TableHeaderColumn dataField="mood" filterFormatted dataFormat={enumFormatter} formatExtraData={moodType} filter={{ type: 'SelectFilter', options: moodType }}>Mood</TableHeaderColumn>
           <TableHeaderColumn dataField="score" dataSort>Score</TableHeaderColumn>
           <TableHeaderColumn dataField="text">Text</TableHeaderColumn>
-          <TableHeaderColumn dataField="audio">Audio</TableHeaderColumn>
+          <TableHeaderColumn dataField="audio" dataFormat={audioFormatter}>Audio</TableHeaderColumn>
         </BootstrapTable>
       </div>
     );
