@@ -44,14 +44,13 @@ class ScatterPage extends React.Component {
           <XAxis height={90} type="number" dataKey={'p'} range={[-5, 5]} name="Pleasant Score" >
             <Label value="Deactivation" offset={0} position="insideBottom" />
           </XAxis>
-          <ZAxis dataKey={'p'} name="mood" />
           <YAxis label={{ value: 'Unpleasant', position: 'left' }} range={[-5, 5]} type="number" dataKey={'a'} name="Activation Score" />
           <CartesianGrid stroke="#eee" strokeDasharray="5 5" />
           <ReferenceLine x={0} stroke="red" label={{ value: 'Activation', position: 'top' }} />
           <ReferenceLine y={0} label={{ value: 'Pleasant', position: 'right' }} stroke="red" />
           <Tooltip cursor={{ strokeDasharray: '3 3' }} />
           <Scatter name="A school" data={dailyData} fill="#8884d8" >
-
+            <LabelList dataKey={'mood'} />
           </Scatter>
 
         </ScatterChart>
