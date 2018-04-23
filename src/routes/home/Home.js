@@ -10,7 +10,6 @@ import {
   CartesianGrid, Line, Label,
   ResponsiveContainer,
 } from 'recharts';
-import CustomizedDot from "./CustomizedDot";
 
 const title = 'Alexa Mood Application';
 
@@ -63,7 +62,6 @@ class Home extends React.Component {
                     <Label value="Mood Scale" offset={0} position="insideLeft" angle="-90" />
                   </YAxis>
                   <Tooltip />
-                  <Line type="monotone" dataKey="mood" dot={<CustomizedDot />} stroke="#8884d8" />
                 </LineChart>
               </ResponsiveContainer>
             </div>

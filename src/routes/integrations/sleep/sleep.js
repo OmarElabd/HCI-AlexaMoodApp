@@ -13,13 +13,13 @@ import {
 const title = 'SleepPage';
 
 const data = [
-      { name: 'Page A', uv: 4000, pv: 2400, amt: 2400, value: 600 },
-      { name: 'Page B', uv: 3000, pv: 1398, amt: 2210, value: 300 },
-      { name: 'Page C', uv: 2000, pv: 9800, amt: 2290, value: 500 },
-      { name: 'Page D', uv: 2780, pv: 3908, amt: 2000, value: 400 },
-      { name: 'Page E', uv: 1890, pv: 4800, amt: 2181, value: 200 },
-      { name: 'Page F', uv: 2390, pv: 3800, amt: 2500, value: 700 },
-      { name: 'Page G', uv: 3490, pv: 4300, amt: 2100, value: 100 },
+      { date: '3/1', mood: 4000, hr: 24, amt: 2400, value: 600 },
+      { date: '3/2', mood: 3000, hr: 13, amt: 2210, value: 300 },
+      { date: '3/3', mood: 2000, hr: 9, amt: 2290, value: 500 },
+      { date: '3/4', mood: 2780, hr: 3, amt: 2000, value: 400 },
+      { date: '3/5', mood: 1890, hr: 4, amt: 2181, value: 200 },
+      { date: '3/6', mood: 2390, hr: 3, amt: 2500, value: 700 },
+      { date: '3/7', mood: 3490, hr: 4, amt: 2100, value: 100 },
 ];
 
 function displaySleepPage(props, context) {
@@ -28,23 +28,21 @@ function displaySleepPage(props, context) {
     <div>
       <div className="row">
         <div className="col-lg-12">
-          <PageHeader>Morris.js Charts</PageHeader>
+          <PageHeader>Your Sleeping Habits Affects Your Mood!</PageHeader>
         </div>
       </div>
 
       <div className="row">
         <div className="col-lg-6">
-          <Panel header={<span>Area Chart Example</span>} >
+          <Panel header={<span>How Many Hours Of Sleep You Had Affects Your Mood</span>} >
             <div>
               <ResponsiveContainer width="100%" aspect={2}>
                 <AreaChart data={data} margin={{ top: 10, right: 30, left: 0, bottom: 0 }} >
-                  <XAxis dataKey="name" />
+                  <XAxis dataKey="hr" name="hrs slept: " unit="hr" />
                   <YAxis />
                   <CartesianGrid stroke="#ccc" />
-                  <Tooltip />
-                  <Area type="monotone" dataKey="uv" stackId="1" stroke="#8884d8" fill="#8884d8" />
-                  <Area type="monotone" dataKey="pv" stackId="1" stroke="#82ca9d" fill="#82ca9d" />
-                  <Area type="monotone" dataKey="amt" stackId="1" stroke="#ffc658" fill="#ffc658" />
+                  <Tooltip cursor={{ strokeDasharray: '3 3' }} />
+                  <Area type="monotone" dataKey="mood" stackId="1" stroke="#8884d8" fill="#8884d8" unit="pts" />
                 </AreaChart>
               </ResponsiveContainer>
             </div>
@@ -52,65 +50,17 @@ function displaySleepPage(props, context) {
         </div>
 
         <div className="col-lg-6">
-          <Panel header={<span>Bar Chart Example</span>} >
-            <div>
-              <ResponsiveContainer width="100%" aspect={2}>
-                <BarChart data={data} margin={{ top: 10, right: 30, left: 0, bottom: 0 }} >
-                  <CartesianGrid stroke="#ccc" />
-                  <XAxis dataKey="name" />
-                  <YAxis />
-                  <Tooltip />
-                  <Bar dataKey="pv" stackId="1" fill="#8884d8" />
-                  <Bar dataKey="uv" stackId="1" fill="#82ca9d" />
-                  <Bar type="monotone" dataKey="amt" fill="#ffc658" />
-                </BarChart>
-              </ResponsiveContainer>
-            </div>
-          </Panel>
-        </div>
-
-        <div className="col-lg-6">
-          <Panel header={<span>Line Chart Example</span>} >
+          <Panel header={<span>How Many Hours You've Been Awake Affects Your Mood</span>} >
             <div>
               <ResponsiveContainer width="100%" aspect={2}>
                 <LineChart data={data} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
                   <CartesianGrid stroke="#ccc" />
-                  <XAxis dataKey="name" />
+                  <XAxis dataKey="amt" unit="hr" />
                   <YAxis />
                   <Tooltip />
-                  <Line type="monotone" dataKey="uv" stroke="#8884d8" />
-                  <Line type="monotone" dataKey="pv" stroke="#82ca9d" />
-                  <Line type="monotone" dataKey="amt" stroke="#ffc658" />
+                  <Line type="monotone" dataKey="mood" stroke="#8884d8" unit="pts" />
                 </LineChart>
               </ResponsiveContainer>
-            </div>
-          </Panel>
-        </div>
-
-        <div className="col-lg-6">
-          <Panel header={<span>Donut Chart Example</span>} >
-            <div>
-
-            </div>
-          </Panel>
-        </div>
-
-        <div className="col-lg-12">
-          <Panel header={<span>Morris.js Usage</span>} >
-            <div>
-              <p>
-                Morris
-                Morris.js is a jQuery based charting plugin created by Olly Smith. In SB Admin,
-                we are using the most recent version of Morris.js which includes the resize
-                functions, which makes the charts fully responsive. The documentation for
-                Morris.js is available on their website,
-                <a target="_blank" rel="noopener noreferrer" href="http://morrisjs.github.io/morris.js/" >
-                  'http://morrisjs.github.io/morris.js/'
-                </a>.
-              </p>
-              <Button bsSize="large" block href="http://morrisjs.github.io/morris.js/">
-                View Morris.js Documentation
-              </Button>
             </div>
           </Panel>
         </div>
