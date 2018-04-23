@@ -72,7 +72,7 @@ class Sidebar extends Component {
                       history.push('/exploration/scatter');
                     }}
                   >
-                    <i className="fa fa-plus fa-fw" /> Activation and Pleasantness
+                    <i className="fa fa-plus fa-fw" /> Valence and Arousal
                   </a>
                 </li>
               </ul>

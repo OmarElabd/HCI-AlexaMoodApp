@@ -14,6 +14,7 @@ import {
 
 import CustomizedDot from './CustomizedDot';
 import moment from 'moment';
+import CustomizedTooltip from "./CustomizedTooltip";
 
 const title = 'Alexa Mood Application';
 
@@ -35,13 +36,13 @@ const dailyData = [
 ];
 
 const weeklyData = [
-  { date: new Date('4/16/2018').getTime(), mood: 4 },
-  { date: new Date('4/17/2018').getTime(), mood: 0 },
-  { date: new Date('4/18/2018').getTime(), mood: -1 },
-  { date: new Date('4/19/2018').getTime(), mood: -5 },
-  { date: new Date('4/20/2018').getTime(), mood: -7 },
-  { date: new Date('4/21/2018').getTime(), mood: -7 },
-  { date: new Date('4/22/2018').getTime(), mood: -6 },
+  { date: new Date('4/16/2018').getTime(), mood: -6 },
+  { date: new Date('4/17/2018').getTime(), mood: -4 },
+  { date: new Date('4/18/2018').getTime(), mood: -4 },
+  { date: new Date('4/19/2018').getTime(), mood: -6 },
+  { date: new Date('4/20/2018').getTime(), mood: 6 },
+  { date: new Date('4/21/2018').getTime(), mood: 7 },
+  { date: new Date('4/22/2018').getTime(), mood: 6 },
 ];
 
 const monthlyData = [
@@ -71,7 +72,7 @@ const monthlyData = [
 
 const yearlyData = [
   { date: 'January 2018', mood: 7 },
-  { date: 'Febuary 2018', mood: 8 },
+  { date: 'February 2018', mood: 8 },
   { date: 'March 2018', mood: 5 },
   { date: 'April 2018', mood: 5 },
 ];
@@ -81,6 +82,7 @@ class Home extends React.Component {
     super(props);
     this.state = {
       activeFilter: 'daily',
+      yLabel: 'Mood Scale',
       dataToUse: dailyData,
     };
   }
@@ -92,6 +94,7 @@ class Home extends React.Component {
   onClickDaily = () => {
     this.setState({
       activeFilter: 'daily',
+      yLabel: 'Mood Scale',
       dataToUse: dailyData,
     });
   };
@@ -99,6 +102,7 @@ class Home extends React.Component {
   onClickWeekly = () => {
     this.setState({
       activeFilter: 'weekly',
+      yLabel: 'Mood Scale',
       dataToUse: weeklyData,
     });
   };
@@ -106,6 +110,7 @@ class Home extends React.Component {
   onClickMonthly = () => {
     this.setState({
       activeFilter: 'monthly',
+      yLabel: 'Mood Scale',
       dataToUse: monthlyData,
     });
   };
@@ -113,6 +118,7 @@ class Home extends React.Component {
   onClickYearly = () => {
     this.setState({
       activeFilter: 'yearly',
+      yLabel: 'Mood Scale (Daily Average)',
       dataToUse: yearlyData,
     });
   };
@@ -172,9 +178,9 @@ class Home extends React.Component {
                   <CartesianGrid stroke="#ccc" />
                   {xAxis}
                   <YAxis domain={[-10, 10]}>
-                    <Label value="Mood Scale" offset={0} position="insideLeft" angle={-90} />
+                    <Label value={this.state.yLabel} offset={0} position="insideLeft" angle={-90} />
                   </YAxis>
-                  <Tooltip />
+                  <Tooltip content={<CustomizedTooltip filter={this.state.activeFilter} />} />
                   <Line type="monotone" dataKey="mood" dot={<CustomizedDot />} stroke="#8884d8" />
                 </LineChart>
               </ResponsiveContainer>
