@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import {
   Button, ButtonToolbar,
+  ToggleButton,
   PageHeader, ToggleButton,
   Panel, ToggleButtonGroup,
 } from 'react-bootstrap';
@@ -13,7 +14,7 @@ import {
 } from 'recharts';
 
 import moment from 'moment';
-import CustomSleepTooltip from "./CustomSleepTooltip";
+import CustomSleepTooltip from './CustomSleepTooltip';
 
 const title = 'Sleep Tracker Data Integration';
 
@@ -126,7 +127,6 @@ class SleepPage extends React.Component {
             <PageHeader>Mood Data Integration with Sleep Tracker Data</PageHeader>
           </div>
         </div>
-
         <div className="col-lg-10">
           <Panel header={<span>Mood Over Time</span>}>
 
