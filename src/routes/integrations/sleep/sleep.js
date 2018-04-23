@@ -1,7 +1,6 @@
 import React, { PropTypes } from 'react';
 import {
   Button, ButtonToolbar,
-  ToggleButton,
   PageHeader, ToggleButton,
   Panel, ToggleButtonGroup,
 } from 'react-bootstrap';
