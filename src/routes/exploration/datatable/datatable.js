@@ -19,17 +19,17 @@ function enumFormatter(cell, row, enumObject) {
 }
 
 const dailyData = [
-  { date: '4/22/2018 7:32 AM', mood: -6, moodtype: 1, text: 'Play the Strokes', audio: '01.wav'},
-  { date: '4/22/2018 10:41 AM', mood: 7, moodtype: 0, text: 'Play the Strokes', audio: '01.wav' },
-  { date: '4/22/2018 11:02 AM', mood: 8, moodtype: 0, text: 'Play the Strokes', audio: '01.wav' },
-  { date: '4/22/2018 11:30 AM', mood: 5, moodtype: 0, text: 'Play the Strokes', audio: '01.wav' },
-  { date: '4/22/2018 12:12 PM', mood: 5, moodtype: 0, text: 'Play the Strokes', audio: '01.wav' },
-  { date: '4/22/2018 4:12 PM', mood: 2, moodtype: 0, text: 'Play the Strokes', audio: '01.wav' },
-  { date: '4/22/2018 5:30 PM', mood: -2, moodtype: 1, text: 'Play the Strokes', audio: '01.wav' },
-  { date: '4/22/2018 9:10 PM', mood: -5, moodtype: 1, text: 'Play the Strokes', audio: '01.wav' },
-  { date: '4/22/2018 9:40 PM', mood: -7, moodtype: 1, text: 'Play the Strokes', audio: '01.wav' },
-  { date: '4/22/2018 10:12 PM', mood: -8, moodtype: 1, text: 'Play the Strokes', audio: '01.wav' },
-  { date: '4/22/2018 11:49 PM', mood: 7, moodtype: 0, text: 'Play the Strokes', audio: '01.wav'},
+  { date: '4/22/2018 7:32 AM', mood: -6, moodtype: 1, text: 'Play the Strokes', audio: '01.wav' },
+  { date: '4/22/2018 10:41 AM', mood: 7, moodtype: 0, text: 'Set Timer for 15 Minutes', audio: '01.wav' },
+  { date: '4/22/2018 11:02 AM', mood: 8, moodtype: 0, text: 'Play Music', audio: '01.wav' },
+  { date: '4/22/2018 11:30 AM', mood: 5, moodtype: 0, text: 'Set Timer for 45 Minutes', audio: '01.wav' },
+  { date: '4/22/2018 12:12 PM', mood: 5, moodtype: 0, text: 'Cancel Timer', audio: '01.wav' },
+  { date: '4/22/2018 4:12 PM', mood: 2, moodtype: 0, text: 'Play Jazz', audio: '01.wav' },
+  { date: '4/22/2018 5:30 PM', mood: -2, moodtype: 1, text: 'Set Timer for 20 Minutes', audio: '01.wav' },
+  { date: '4/22/2018 9:10 PM', mood: -5, moodtype: 1, text: 'Play Classical Rock Music', audio: '01.wav' },
+  { date: '4/22/2018 9:40 PM', mood: -7, moodtype: 1, text: 'Play Soft Jazz', audio: '01.wav' },
+  { date: '4/22/2018 10:12 PM', mood: -8, moodtype: 1, text: 'What time does Black Dog BBQ Close?', audio: '01.wav' },
+  { date: '4/22/2018 11:49 PM', mood: 7, moodtype: 0, text: 'Set Alarm for 8:00 AM', audio: '01.wav'},
 ];
 
 const products = [{
