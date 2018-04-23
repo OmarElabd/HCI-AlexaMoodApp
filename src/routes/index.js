@@ -11,6 +11,7 @@ import React from 'react';
 import App from '../components/App';
 
 // Child routes
+import fitness from './integrations/fitness'
 import scatter from './exploration/scatter';
 import datatable from './exploration/datatable';
 import sleep from './integrations/sleep';
@@ -70,6 +71,7 @@ export default [
       sleep,
       datatable,
       scatter,
+      fitness,
       // place new routes before...
       // content,
       error,

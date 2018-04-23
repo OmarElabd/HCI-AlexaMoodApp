@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import classNames from 'classnames';
 import history from '../../core/history';
 
@@ -12,42 +12,33 @@ class Sidebar extends Component {
       multiLevelDropdownCollapsed: true,
       thirdLevelDropdownCollapsed: true,
       samplePagesCollapsed: true,
+      dataCollapsed: true,
     };
   }
 
   render() {
     return (
-      <div className="navbar-default sidebar" style={{ marginLeft: '-20px' }} role="navigation">
+      <div className="navbar-default sidebar" style={{marginLeft: '-20px'}} role="navigation">
         <div className="sidebar-nav navbar-collapse collapse">
           <ul className="nav in" id="side-menu">
-            <li className="sidebar-search">
-              <div className="input-group custom-search-form">
-                <input type="text" className="form-control" placeholder="Search..." />
-                <span className="input-group-btn">
-                  <button className="btn btn-default" type="button">
-                    <i className="fa fa-search" />
-                  </button>
-                </span>
-              </div>
-            </li>
 
             <li>
               <a
                 href="" onClick={(e) => {
-                  e.preventDefault();
-                  history.push('/');
-                }}
+                e.preventDefault();
+                history.push('/');
+              }}
               >
-                <i className="fa fa-dashboard fa-fw" /> &nbsp;Home
+                <i className="fa fa-home fa-fw" /> &nbsp;Overview
               </a>
             </li>
 
-            <li className={classNames({ active: !this.state.chartsElementsCollapsed })}>
+            <li className={classNames({active: !this.state.chartsElementsCollapsed})}>
               <a
                 href=""
                 onClick={(e) => {
                   e.preventDefault();
-                  this.setState({ chartsElementsCollapsed: !this.state.chartsElementsCollapsed });
+                  this.setState({chartsElementsCollapsed: !this.state.chartsElementsCollapsed});
                   return false;
                 }}
               >
@@ -66,11 +57,11 @@ class Sidebar extends Component {
                 <li>
                   <a
                     href="" onClick={(e) => {
-                      e.preventDefault();
-                      history.push('/exploration/datatable');
-                    }}
+                    e.preventDefault();
+                    history.push('/exploration/datatable');
+                  }}
                   >
-                    DataTable
+                    <i className="fa fa-table fa-fw" /> View Data
                   </a>
                 </li>
                 <li>
@@ -81,33 +72,65 @@ class Sidebar extends Component {
                       history.push('/exploration/scatter');
                     }}
                   >
-                    Scatter Plot
+                    <i className="fa fa-plus fa-fw" /> Activation and Pleasantness
                   </a>
                 </li>
               </ul>
             </li>
 
 
-            <li>
+            <li className={classNames({active: !this.state.dataCollapsed})}>
               <a
-                href="" onClick={(e) => {
+                href=""
+                onClick={(e) => {
                   e.preventDefault();
-                  history.push('/table');
+                  this.setState({dataCollapsed: !this.state.dataCollapsed});
+                  return false;
                 }}
               >
-                <i className="fa fa-table fa-fw" /> &nbsp;Recommendations
+                <i className="fa fa-random fa-fw" /> &nbsp;Data Integrations
+                <span className="fa arrow" />
               </a>
+
+              <ul
+                className={
+                  classNames({
+                    'nav nav-second-level': true,
+                    collapse: this.state.dataCollapsed,
+                  })
+                }
+              >
+                <li>
+                  <a
+                    href="" onClick={(e) => {
+                    e.preventDefault();
+                    history.push('/integrations/sleep');
+                  }}
+                  >
+                    <i className="fa fa-bed fa-fw" /> Sleep Tracker Data
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="" onClick={(e) => {
+                      e.preventDefault();
+                      history.push('/integrations/fitness');
+                    }}
+                  >
+                    <i className="fa fa-heartbeat fa-fw" /> Fitness Tracker Data
+                  </a>
+                </li>
+              </ul>
             </li>
 
-
             <li>
               <a
                 href="" onClick={(e) => {
-                  e.preventDefault();
-                  history.push('/table');
-                }}
+                e.preventDefault();
+                history.push('/table');
+              }}
               >
-                <i className="fa fa-table fa-fw" /> &nbsp;Data Integrations
+                <i className="fa fa-thumbs-up fa-fw" /> &nbsp;Recommendations
               </a>
             </li>
           </ul>

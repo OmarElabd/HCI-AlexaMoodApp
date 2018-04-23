@@ -4,7 +4,7 @@ import SleepPage from './sleep';
 
 export default {
 
-  path: '/sleep',
+  path: '/integrations/sleep',
 
   action() {
     return <SleepPage />;

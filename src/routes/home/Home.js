@@ -1,5 +1,6 @@
 import React, {PropTypes} from 'react';
 import {
+  Button,
   PageHeader,
   Panel,
 } from 'react-bootstrap';
@@ -10,6 +11,8 @@ import {
   CartesianGrid, Line, Label,
   ResponsiveContainer,
 } from 'recharts';
+
+import CustomizedDot from "./CustomizedDot";
 
 const title = 'Alexa Mood Application';
 
@@ -40,6 +43,8 @@ class Home extends React.Component {
   }
 
   render() {
+    document.title = title;
+
     // HTML GOES HERE
     return (
       <div className="container-fluid">
@@ -51,6 +56,9 @@ class Home extends React.Component {
 
         <div className="col-lg-10">
           <Panel header={<span>Mood Over Time</span>}>
+            <Button type="submit">Daily</Button>
+            <Button type="submit">Weekly</Button>
+            <Button type="submit">Year</Button>
             <div>
               <ResponsiveContainer width="100%" aspect={2}>
                 <LineChart data={this.state.dataToUse} margin={{top: 20, right: 80, bottom: 20, left: 20}}>
@@ -59,9 +67,10 @@ class Home extends React.Component {
                     <Label value="Date" offset={0} position="insideBottom" />
                   </XAxis>
                   <YAxis domain={[-10, 10]}>
-                    <Label value="Mood Scale" offset={0} position="insideLeft" angle="-90" />
+                    <Label value="Mood Scale" offset={0} position="insideLeft" angle={-90} />
                   </YAxis>
                   <Tooltip />
+                  <Line type="monotone" dataKey="mood" dot={<CustomizedDot />} stroke="#8884d8" />
                 </LineChart>
               </ResponsiveContainer>
             </div>
