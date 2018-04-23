@@ -93,8 +93,8 @@ class FitnessPage extends React.Component {
   onClickYearly = () => {
     this.setState({
       activeFilter: 'yearly',
-      rightYLabel: 'Number of Steps (Daily Average)',
-      leftYLabel: 'Mood Scale (Daily Average)',
+      rightYLabel: 'Avg. Number of Steps',
+      leftYLabel: 'Avg. Mood Scale',
       dataToUse: yearlyData,
     });
   };

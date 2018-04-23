@@ -127,7 +127,7 @@ class Sidebar extends Component {
               <a
                 href="" onClick={(e) => {
                 e.preventDefault();
-                history.push('/table');
+                history.push('/recommendations');
               }}
               >
                 <i className="fa fa-thumbs-up fa-fw" /> &nbsp;Insights & Recommendations
