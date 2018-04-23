@@ -11,7 +11,8 @@ import React from 'react';
 import App from '../components/App';
 
 // Child routes
-import fitness from './integrations/fitness'
+import recommendations from './recommendations';
+import fitness from './integrations/fitness';
 import scatter from './exploration/scatter';
 import datatable from './exploration/datatable';
 import sleep from './integrations/sleep';
@@ -75,6 +76,7 @@ export default [
       // place new routes before...
       // content,
       error,
+      recommendations
     ],
 
     async action({ next, render, context }) {

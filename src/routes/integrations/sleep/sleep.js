@@ -93,8 +93,8 @@ class SleepPage extends React.Component {
   onClickYearly = () => {
     this.setState({
       activeFilter: 'yearly',
-      rightYLabel: 'Hours of Sleep (Daily Average)',
-      leftYLabel: 'Mood Scale (Daily Average)',
+      rightYLabel: 'Avg. Hours of Sleep',
+      leftYLabel: 'Avg. Mood Scale',
       dataToUse: yearlyData,
     });
   };
