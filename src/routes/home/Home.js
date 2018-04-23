@@ -56,9 +56,11 @@ class Home extends React.Component {
 
         <div className="col-lg-10">
           <Panel header={<span>Mood Over Time</span>}>
-            <Button type="submit">Daily</Button>
-            <Button type="submit">Weekly</Button>
-            <Button type="submit">Year</Button>
+            <div>
+              <Button type="submit">Today</Button>
+              <Button type="submit">This Week</Button>
+              <Button type="submit">This Year</Button>
+            </div>
             <div>
               <ResponsiveContainer width="100%" aspect={2}>
                 <LineChart data={this.state.dataToUse} margin={{top: 20, right: 80, bottom: 20, left: 20}}>

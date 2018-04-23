@@ -12,7 +12,7 @@ import {
   ResponsiveContainer } from '../../../vendor/recharts';
 // ResponsiveContainer is broken so we have customise the ResponsiveContainer
 
-const title = 'SleepPage';
+const title = 'Sleep Data';
 
 const data1 = [
       { date: '3/3', mood: 4000, hr: 3 },
@@ -35,9 +35,6 @@ const data2 = [
 ];
 
 class SleepPage extends React.Component {
-  onMenuClicked = () => {
-    this.setState({ dataToUse: data2 });
-  };
   constructor(props) {
     super(props);
     this.state = {
@@ -45,9 +42,9 @@ class SleepPage extends React.Component {
     };
   }
 
-
-
-  displayName: 'SleepPage';
+  onMenuClicked = () => {
+    this.setState({ dataToUse: data2 });
+  };
 
   render() {
     return (
@@ -67,7 +64,7 @@ class SleepPage extends React.Component {
                    <i className="fa fa-bar-chart-o fa-fw" /> How Many Hours Of Sleep You Had Affects Your Mood
                      <div className="pull-right">
                        <DropdownButton title="Dropdown" bsSize="xs" pullRight id="dropdownButton1">
-                         <MenuItem eventKey="1" onClick={this.onMenuClicked()}>Month</MenuItem>
+                         <MenuItem eventKey="1" onClick={() => this.onMenuClicked()}>Month</MenuItem>
                          <MenuItem eventKey="2">Week</MenuItem>
                        </DropdownButton>
                      </div>
