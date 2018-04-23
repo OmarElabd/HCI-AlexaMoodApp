@@ -69,135 +69,135 @@ function displayTable(props, context) {
                       aria-describedby="dataTables-example_info"
                     >
                       <thead>
-                        <tr role="row">
-                          <th
-                            className="sorting_asc"
-                            tabIndex="0"
-                            aria-controls="dataTables-example"
-                            rowSpan="1"
-                            colSpan="1"
-                            aria-label="Rendering engine: activate to sort column descending"
-                            aria-sort="ascending"
-                            style={{ width: 265 }}
-                          >
+                      <tr role="row">
+                        <th
+                          className="sorting_asc"
+                          tabIndex="0"
+                          aria-controls="dataTables-example"
+                          rowSpan="1"
+                          colSpan="1"
+                          aria-label="Rendering engine: activate to sort column descending"
+                          aria-sort="ascending"
+                          style={{ width: 265 }}
+                        >
                           Rendering engine
-                          </th>
-                          <th
-                            className="sorting"
-                            tabIndex="0"
-                            aria-controls="dataTables-example"
-                            rowSpan="1"
-                            colSpan="1"
-                            aria-label="Browser: activate to sort column ascending"
-                            style={{ width: 321 }}
-                          >
+                        </th>
+                        <th
+                          className="sorting"
+                          tabIndex="0"
+                          aria-controls="dataTables-example"
+                          rowSpan="1"
+                          colSpan="1"
+                          aria-label="Browser: activate to sort column ascending"
+                          style={{ width: 321 }}
+                        >
                           Browser
-                          </th>
-                          <th
-                            className="sorting"
-                            tabIndex="0"
-                            aria-controls="dataTables-example"
-                            rowSpan="1"
-                            colSpan="1"
-                            aria-label="Platform(s): activate to sort column ascending"
-                            style={{ width: 299 }}
-                          >
+                        </th>
+                        <th
+                          className="sorting"
+                          tabIndex="0"
+                          aria-controls="dataTables-example"
+                          rowSpan="1"
+                          colSpan="1"
+                          aria-label="Platform(s): activate to sort column ascending"
+                          style={{ width: 299 }}
+                        >
                           Platform(s)
-                          </th>
-                          <th
-                            className="sorting"
-                            tabIndex="0"
-                            aria-controls="dataTables-example"
-                            rowSpan="1"
-                            colSpan="1"
-                            aria-label="Engine version: activate to sort column ascending"
-                            style={{ width: 231 }}
-                          >
+                        </th>
+                        <th
+                          className="sorting"
+                          tabIndex="0"
+                          aria-controls="dataTables-example"
+                          rowSpan="1"
+                          colSpan="1"
+                          aria-label="Engine version: activate to sort column ascending"
+                          style={{ width: 231 }}
+                        >
                           Engine version
-                          </th>
-                          <th
-                            className="sorting"
-                            tabIndex="0"
-                            aria-controls="dataTables-example"
-                            rowSpan="1"
-                            colSpan="1"
-                            aria-label="CSS grade: activate to sort column ascending"
-                            style={{ width: 180 }}
-                          >CSS grade
-                          </th>
-                        </tr>
+                        </th>
+                        <th
+                          className="sorting"
+                          tabIndex="0"
+                          aria-controls="dataTables-example"
+                          rowSpan="1"
+                          colSpan="1"
+                          aria-label="CSS grade: activate to sort column ascending"
+                          style={{ width: 180 }}
+                        >CSS grade
+                        </th>
+                      </tr>
                       </thead>
                       <tbody>
-                        <tr className="gradeA odd" role="row">
-                          <td className="sorting_1">Gecko</td>
-                          <td>Firefox 1.0</td>
-                          <td>Win 98+ / OSX.2+</td>
-                          <td className="center">1.7</td>
-                          <td className="center">A</td>
-                        </tr>
-                        <tr className="gradeA even" role="row">
-                          <td className="sorting_1">Gecko</td>
-                          <td>Firefox 1.5</td>
-                          <td>Win 98+ / OSX.2+</td>
-                          <td className="center">1.8</td>
-                          <td className="center">A</td>
-                        </tr>
-                        <tr className="gradeA odd" role="row">
-                          <td className="sorting_1">Gecko</td>
-                          <td>Firefox 2.0</td>
-                          <td>Win 98+ / OSX.2+</td>
-                          <td className="center">1.8</td>
-                          <td className="center">A</td>
-                        </tr>
-                        <tr className="gradeA even" role="row">
-                          <td className="sorting_1">Gecko</td>
-                          <td>Firefox 3.0</td>
-                          <td>Win 2k+ / OSX.3+</td>
-                          <td className="center">1.9</td>
-                          <td className="center">A</td>
-                        </tr>
-                        <tr className="gradeA odd" role="row">
-                          <td className="sorting_1">Gecko</td>
-                          <td>Camino 1.0</td>
-                          <td>OSX.2+</td>
-                          <td className="center">1.8</td>
-                          <td className="center">A</td>
-                        </tr>
-                        <tr className="gradeA even" role="row">
-                          <td className="sorting_1">Gecko</td>
-                          <td>Camino 1.5</td>
-                          <td>OSX.3+</td>
-                          <td className="center">1.8</td>
-                          <td className="center">A</td>
-                        </tr>
-                        <tr className="gradeA odd" role="row">
-                          <td className="sorting_1">Gecko</td>
-                          <td>Netscape 7.2</td>
-                          <td>Win 95+ / Mac OS 8.6-9.2</td>
-                          <td className="center">1.7</td>
-                          <td className="center">A</td>
-                        </tr>
-                        <tr className="gradeA even" role="row">
-                          <td className="sorting_1">Gecko</td>
-                          <td>Netscape Browser 8</td>
-                          <td>Win 98SE+</td>
-                          <td className="center">1.7</td>
-                          <td className="center">A</td>
-                        </tr>
-                        <tr className="gradeA odd" role="row">
-                          <td className="sorting_1">Gecko</td>
-                          <td>Netscape Navigator 9</td>
-                          <td>Win 98+ / OSX.2+</td>
-                          <td className="center">1.8</td>
-                          <td className="center">A</td>
-                        </tr>
-                        <tr className="gradeA even" role="row">
-                          <td className="sorting_1">Gecko</td>
-                          <td>Mozilla 1.0</td>
-                          <td>Win 95+ / OSX.1+</td>
-                          <td className="center">1</td>
-                          <td className="center">A</td>
-                        </tr>
+                      <tr className="gradeA odd" role="row">
+                        <td className="sorting_1">Gecko</td>
+                        <td>Firefox 1.0</td>
+                        <td>Win 98+ / OSX.2+</td>
+                        <td className="center">1.7</td>
+                        <td className="center">A</td>
+                      </tr>
+                      <tr className="gradeA even" role="row">
+                        <td className="sorting_1">Gecko</td>
+                        <td>Firefox 1.5</td>
+                        <td>Win 98+ / OSX.2+</td>
+                        <td className="center">1.8</td>
+                        <td className="center">A</td>
+                      </tr>
+                      <tr className="gradeA odd" role="row">
+                        <td className="sorting_1">Gecko</td>
+                        <td>Firefox 2.0</td>
+                        <td>Win 98+ / OSX.2+</td>
+                        <td className="center">1.8</td>
+                        <td className="center">A</td>
+                      </tr>
+                      <tr className="gradeA even" role="row">
+                        <td className="sorting_1">Gecko</td>
+                        <td>Firefox 3.0</td>
+                        <td>Win 2k+ / OSX.3+</td>
+                        <td className="center">1.9</td>
+                        <td className="center">A</td>
+                      </tr>
+                      <tr className="gradeA odd" role="row">
+                        <td className="sorting_1">Gecko</td>
+                        <td>Camino 1.0</td>
+                        <td>OSX.2+</td>
+                        <td className="center">1.8</td>
+                        <td className="center">A</td>
+                      </tr>
+                      <tr className="gradeA even" role="row">
+                        <td className="sorting_1">Gecko</td>
+                        <td>Camino 1.5</td>
+                        <td>OSX.3+</td>
+                        <td className="center">1.8</td>
+                        <td className="center">A</td>
+                      </tr>
+                      <tr className="gradeA odd" role="row">
+                        <td className="sorting_1">Gecko</td>
+                        <td>Netscape 7.2</td>
+                        <td>Win 95+ / Mac OS 8.6-9.2</td>
+                        <td className="center">1.7</td>
+                        <td className="center">A</td>
+                      </tr>
+                      <tr className="gradeA even" role="row">
+                        <td className="sorting_1">Gecko</td>
+                        <td>Netscape Browser 8</td>
+                        <td>Win 98SE+</td>
+                        <td className="center">1.7</td>
+                        <td className="center">A</td>
+                      </tr>
+                      <tr className="gradeA odd" role="row">
+                        <td className="sorting_1">Gecko</td>
+                        <td>Netscape Navigator 9</td>
+                        <td>Win 98+ / OSX.2+</td>
+                        <td className="center">1.8</td>
+                        <td className="center">A</td>
+                      </tr>
+                      <tr className="gradeA even" role="row">
+                        <td className="sorting_1">Gecko</td>
+                        <td>Mozilla 1.0</td>
+                        <td>Win 95+ / OSX.1+</td>
+                        <td className="center">1</td>
+                        <td className="center">A</td>
+                      </tr>
                       </tbody>
                     </table>
                   </div>

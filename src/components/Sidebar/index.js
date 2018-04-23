@@ -130,7 +130,7 @@ class Sidebar extends Component {
                 history.push('/table');
               }}
               >
-                <i className="fa fa-thumbs-up fa-fw" /> &nbsp;Recommendations
+                <i className="fa fa-thumbs-up fa-fw" /> &nbsp;Insights & Recommendations
               </a>
             </li>
           </ul>
