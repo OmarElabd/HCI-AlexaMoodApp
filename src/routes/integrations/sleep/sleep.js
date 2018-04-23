@@ -5,21 +5,31 @@ import PageHeader from 'react-bootstrap/lib/PageHeader';
 
 import {
   LineChart, Tooltip,
-  Line, XAxis, YAxis, Area,
+  Line, XAxis, YAxis, ZAxis, Area,
   CartesianGrid, AreaChart, Bar, BarChart,
   ResponsiveContainer } from '../../../vendor/recharts';
 // ResponsiveContainer is broken so we have customise the ResponsiveContainer
 
 const title = 'SleepPage';
 
-const data = [
-      { date: '3/1', mood: 4000, hr: 24, amt: 2400, value: 600 },
-      { date: '3/2', mood: 3000, hr: 13, amt: 2210, value: 300 },
-      { date: '3/3', mood: 2000, hr: 9, amt: 2290, value: 500 },
-      { date: '3/4', mood: 2780, hr: 3, amt: 2000, value: 400 },
-      { date: '3/5', mood: 1890, hr: 4, amt: 2181, value: 200 },
-      { date: '3/6', mood: 2390, hr: 3, amt: 2500, value: 700 },
-      { date: '3/7', mood: 3490, hr: 4, amt: 2100, value: 100 },
+const data1 = [
+      { date: '3/3', mood: 4000, hr: 3 },
+      { date: '3/5', mood: 3000, hr: 5 },
+      { date: '3/23', mood: 2000, hr: 6 },
+      { date: '3/7', mood: 2780, hr: 7 },
+      { date: '3/4', mood: 1890, hr: 8 },
+      { date: '3/8', mood: 2390, hr: 9 },
+      { date: '3/10', mood: 3490, hr: 10 },
+];
+
+const data2 = [
+  { date: '3/1', mood: 4000, hr: 1 },
+  { date: '3/1', mood: 3000, hr: 2 },
+  { date: '3/1', mood: 2000, hr: 3 },
+  { date: '3/1', mood: 2780, hr: 4 },
+  { date: '3/1', mood: 1890, hr: 5 },
+  { date: '3/1', mood: 2390, hr: 6 },
+  { date: '3/1', mood: 3490, hr: 7 },
 ];
 
 function displaySleepPage(props, context) {
@@ -37,12 +47,13 @@ function displaySleepPage(props, context) {
           <Panel header={<span>How Many Hours Of Sleep You Had Affects Your Mood</span>} >
             <div>
               <ResponsiveContainer width="100%" aspect={2}>
-                <AreaChart data={data} margin={{ top: 10, right: 30, left: 0, bottom: 0 }} >
-                  <XAxis dataKey="hr" name="hrs slept: " unit="hr" />
+                <AreaChart data={data1} margin={{ top: 10, right: 30, left: 0, bottom: 0 }} >
+                  <XAxis dataKey="hr" />
                   <YAxis />
                   <CartesianGrid stroke="#ccc" />
                   <Tooltip cursor={{ strokeDasharray: '3 3' }} />
                   <Area type="monotone" dataKey="mood" stackId="1" stroke="#8884d8" fill="#8884d8" unit="pts" />
+                  <Area type="monotone" dataKey="date" />
                 </AreaChart>
               </ResponsiveContainer>
             </div>
@@ -53,12 +64,13 @@ function displaySleepPage(props, context) {
           <Panel header={<span>How Many Hours You've Been Awake Affects Your Mood</span>} >
             <div>
               <ResponsiveContainer width="100%" aspect={2}>
-                <LineChart data={data} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
+                <LineChart data={data2} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
                   <CartesianGrid stroke="#ccc" />
-                  <XAxis dataKey="amt" unit="hr" />
+                  <XAxis dataKey="hr" unit="hr" />
                   <YAxis />
                   <Tooltip />
                   <Line type="monotone" dataKey="mood" stroke="#8884d8" unit="pts" />
+                  <Line type="monotone" dataKey="date" />
                 </LineChart>
               </ResponsiveContainer>
             </div>
